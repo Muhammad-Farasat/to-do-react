@@ -8,10 +8,29 @@ function Button(props) {
         width: props.width,
     }
 
+
     return (
     <>
+        
+        <style>
+            {
+                `
+                @media (max-width: 600px){
+                    .btn{
+                        width: 20% !important;
+                        padding: 0.5rem 0.5rem
+
+                    }
+                }
+                
+                
+                
+                `
+            }
+        </style>
+
         <button 
-         className='p-2 py-3 ml-2 rounded-md'
+         className='btn p-2 py-3 ml-2 rounded-md font-bold text-lg max-sm:text-[16px]'
          style={buttonStyle}
          name={props.name}
          onClick={props.click}

@@ -8,27 +8,33 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
         manifest: {
-          name: 'To-Do App',
-          short_name: 'ToDo',
-          description: 'A simple to-do app',
-          start_url: '/',
-          display: 'standalone',
-          background_color: '#ffffff',
-          theme_color: '#3f51b5',
+          name: "To-Do App",
+          short_name: "ToDo",
+          description: "A simple to-do app",
+          start_url: ".",
+          display: "standalone",
+          background_color: "#ffffff",
+          theme_color: "#3f51b5",
           icons: [
             {
-              src: '/Icons/icon.png',
-              sizes: '192x192',
-              type: 'image/png',
+              src: "/icon-192x192.png",
+              sizes: "192x192",
+              type: "image/png"
             },
             {
-              src: '/Icons/icon-512x512.png',
-              sizes: '512x512',
-              type: 'image/png',
+              src: "/icon-512x512.png",
+              sizes: "512x512",
+              type: "image/png"
             },
-          ],
+            {
+              src: "/maskable.png",
+              sizes: "568x568",
+              type: "image/png",
+              purpose: "any maskable"
+            }
+          ]
         }
     })
   ],

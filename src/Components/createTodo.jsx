@@ -75,22 +75,20 @@ function CreateTodo() {
 //     }
 //   };
 
-
-
-
+ 
   return (
     <>
-      <div className='container flex flex-col items-center relative top-24'>
+      <div className='container flex flex-col items-center relative top-24 max-sm:overflow-x-hidden'>
         <h2 className='text-4xl font-bold '>To-Do List</h2>
         <p>Be Productive, Be Successful</p>
-        <div>
+        <div className='max-sm:w-80 max-sm:mt-8'>
           <input
             type="text"
             placeholder='write here..'
             onChange={onChange}
             value={todo.title}
             onKeyPress={createTodo1}
-            className='w-[28rem] bg-[#444444] p-2 pl-4 py-3 rounded-md mt-6 outline-none'
+            className='w-[28rem] bg-[#444444] p-2 pl-4 py-3 rounded-md mt-6 outline-none text-xl max-sm:text-[16px] max-sm:w-60 max-sm:py-2.5'
           />
           <Button bgColor="#00EDB5" width="6rem" name="add" click={createTodo1}>Add</Button>
         </div>

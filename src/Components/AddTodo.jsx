@@ -14,16 +14,17 @@ function AddTodo(props) {
   return (
     <>
       <div className="">
-        <p className="mt-6 text-2xl">List:</p>
+        <p className="mt-6 text-2xl max-sm:text-xl max-sm:mt-12" >List:</p>
         <ul>
           {todoArr && todoArr.length > 0
             ? todoArr.map((el, i) => (
                 <li
                   key={i}
-                  className="w-[34rem] px-8 py-1 mt-2 rounded-md bg-[#444444] flex items-center justify-between"
+                  className=
+                  "w-[34rem] px-8 py-1 mt-2 rounded-md bg-[#444444] flex items-center justify-between max-sm:w-80"
                 >
-                  <span className={el.done ? 'line-through' : ''}>{el.title}</span>
-                  <div className="flex items-center gap-2">
+                  <span className={el.done ? 'line-through' : ''} >{el.title}</span>
+                  <div className="flex items-center gap-2 max-sm:gap-0">
                     <button className="text-xl" onClick={() => completeTodo(i)}>
                       {el.done ? <FaCheckCircle className="text-[#00EDB5]" /> : <FaRegCircle />}
                     </button>
