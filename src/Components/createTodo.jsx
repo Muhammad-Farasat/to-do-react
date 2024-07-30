@@ -79,7 +79,7 @@ function CreateTodo() {
   return (
     <>
       <div className='container flex flex-col items-center relative top-24 max-sm:overflow-x-hidden'>
-        <h2 className='text-4xl font-bold '>To-Do List</h2>
+        <h2 className='text-4xl font-bold '>ToDo List</h2>
         <p>Be Productive, Be Successful</p>
         <div className='max-sm:w-80 max-sm:mt-8'>
           <input
